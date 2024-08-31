@@ -1,0 +1,30 @@
+Ansible
+----------
+
+Installing nginx on ansible-node from ansible-server
+
+create 2 instances--->1. ansible-server,  2. ansible-node
+1. first install ansible in ansible-server
+sudo dnf install ansible -y   
+
+  [2.connect to ansible-node from ansible-server --->  ssh ec2-user@<ansible-node private ip>]
+
+ 
+
+2. connecting to ansible-node from ansible-server
+
+ansible -i <ansible-node private ip>, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+
+ ansible -i 172.31.33.135, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+ 
+3. install nginx on ansible node from ansible-server
+   
+ansible -i <ansible-node private ip>, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+   
+   ansible -i 172.31.33.135, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+   
+4. start nginx
+
+ansible -i <ansible-node private ip>, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
+   
+   ansible -i 172.31.33.135, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
