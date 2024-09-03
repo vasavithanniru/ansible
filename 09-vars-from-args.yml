@@ -1,0 +1,6 @@
+- name: variables to print
+  hosts: web
+  tasks:
+  - name: print the info from rgs
+    ansible.builtin.debug:
+      msg: "Hi {{NAME}}, good: {{GREETING}}"
