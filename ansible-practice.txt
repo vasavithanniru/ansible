@@ -1,1 +1,5 @@
-asdfaasdffasdfadsf
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-ping.yml
+
+ansible.builtin.debug --- to debug
+ansible.builtin.package --- install purpose
+ansible.builtin.service  --- enable services
