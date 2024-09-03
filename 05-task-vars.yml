@@ -1,9 +1,9 @@
 - name: print the variables
   hosts: web
   vars: # play level varibles , all tasks in this play have access to this
-  COURSE: "DEVOPS"
-  DURATION: "120 HRS"
-  TRAINER: "SIVA"
+    COURSE: "DEVOPS"
+    DURATION: "120 HRS"
+    TRAINER: "SIVA"
   tasks:
   - name: print above info
     ansible.builtin.debug:
@@ -11,7 +11,7 @@
 
   - name: tak level vars
     vars: # task level variables, override playlevel
-    COURSE: "ansible"
-    ansible.builtin.debug:
+      COURSE: "ansible"
+      ansible.builtin.debug:
       msg: "Hi i am learning {{COURSE}}, duration {{DURATION}}, triner {{TRAINER}}"
     
