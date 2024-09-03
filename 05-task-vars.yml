@@ -13,5 +13,5 @@
     vars: # task level variables, override playlevel
       COURSE: "ansible"
       ansible.builtin.debug:
-      msg: "Hi i am learning {{COURSE}}, duration {{DURATION}}, triner {{TRAINER}}"
+        msg: "Hi i am learning {{COURSE}}, duration {{DURATION}}, triner {{TRAINER}}"
     
