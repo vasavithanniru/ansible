@@ -6,7 +6,7 @@
       msg: "this is from play-01 and Task-01"
   
 - name: PLAY 02
-  host: web
+  hosts: weba
   tasks:  
   - name: PLAY 02 TASK 01
     ansible.builtin.debug:
