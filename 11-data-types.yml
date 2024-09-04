@@ -16,8 +16,9 @@
       cm: ansible
       ci: jenkins
       cloud: aws
-    tasks:
-    - name: print the course info
-      ansible.builtin.debug:
-        msg: "Hi i am learning : {{COURSE}}, duration: {{DURATION}}, from : {{TRAINER}}, and topics are : {{TOPICS}}, mode is: {{live}}, tools are : {{tools}},"
+  tasks:
+  - name: print the course info
+    ansible.builtin.debug:
+       msg: "Hi i am learning : {{COURSE}}, duration: {{DURATION}}, from : {{TRAINER}}, and topics are :    {{TOPICS}}, mode is: {{live}}, tools are : {{tools}},"
 
+ 
