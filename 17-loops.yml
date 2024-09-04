@@ -17,7 +17,6 @@
       name: "{{item}}"
       state: started
     loop:
-    - ansible
     - nginx
     - mysql
     - postfix  
