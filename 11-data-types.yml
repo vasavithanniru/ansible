@@ -1,4 +1,4 @@
-- name: print course details
+- name: devops course details
   hosts: local
   connections: local
   vars:
