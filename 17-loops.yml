@@ -12,3 +12,12 @@
     - nginx
     - mysql
     - postfix
+  - name: install packages
+    ansible.builtin.service:
+      name: "{{item}}"
+      state: started
+    loop:
+    - ansible
+    - nginx
+    - mysql
+    - postfix  
