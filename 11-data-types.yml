@@ -1,4 +1,4 @@
-- name: datatypes
+- name: print course details
   hosts: local
   connections: local
   vars:
