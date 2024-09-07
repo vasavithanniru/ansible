@@ -11,3 +11,8 @@
     - { name: 'nginx', state: 'absent'}
     - { name: 'postfix', state: 'present'}
     - { name: 'nginx', state: 'present'}
+
+  - name: daemon services 
+    ansible.builtin.service: 
+      name: nginx 
+      state: started   
