@@ -4,3 +4,5 @@
   - name: execute the command 
     ansible.builtin.shell: ls -lrt > /tmp/output.txt
     register: output
+
+    

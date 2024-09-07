@@ -15,6 +15,8 @@ ansible-playbook -i inventory.ini <file name>
 
 functions == filters
 
+ansible.utils.ipv4 -- will filter ipv4 addresses
+
 python --> ansible is not giving opportunity to write custom functions, if we want we have to write python code and get that functionality
 
 filter --> manipulations
@@ -38,11 +40,39 @@ less cloud-init-output.log   ----- can see sudo logs here
 ansible --version 
 
 
-pip9.3 install netaddr   --- to install python packages/libraries
-pip9.3 install boto3 botocore
+pip3.9 install netaddr   --- to install python packages/libraries
+pip3.9 install boto3 botocore
 
 aws configure
 region--- us-east-1
 output - nothing just hit enter
 
+
+imp folders
+-----------
+var/log/nginx
+ls
+ls
+exit
+ls -lrt
+ls
+ls -la
+pwd
+cd
+cd /etc/nginx
+ls
+cd /usr/share/nginx
+cd /usr/share/nginx/html
+ls
+cat index.html
+cd /var/
+ls
+cd log
+ls
+cd nginx
+ls
+history
+ifconfig
+/etc/nginx
+/usr/share/nginx/html
 
