@@ -1,5 +1,48 @@
 ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-ping.yml
 
-ansible.builtin.debug --- to debug
+ansible.builtin.debug --- to print msg
 ansible.builtin.package --- install purpose
 ansible.builtin.service  --- enable services
+ansible.builtin.command --- ansible can't gaurentee module exists for everything...we can use direct commands if module not available
+
+
+
+
+FUNCTIONS:
+-----------------------
+ansible-playbook -i inventory.ini <file name>
+
+
+functions == filters
+
+python --> ansible is not giving opportunity to write custom functions, if we want we have to write python code and get that functionality
+
+filter --> manipulations
+
+ansible.builtin.command
+ansible.builtin.shell
+
+command vs shell(imp)
+---------------------
+command --> simple commands, it will not get the shell environment
+shell --> complex like pipes, redirections, etc. it gets the shell environment
+
+command is secure than shell, prefer use command if works
+
+
+sudo su -
+cd /var/log 
+ls -l
+less cloud-init-output.log   ----- can see sudo logs here
+
+ansible --version 
+
+
+pip9.3 install netaddr   --- to install python packages/libraries
+pip9.3 install boto3 botocore
+
+aws configure
+region--- us-east-1
+output - nothing just hit enter
+
+
