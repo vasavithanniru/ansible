@@ -41,3 +41,9 @@
       - {"key": "duration", "value": "120hrs"}
     ansible.builtin.debug: 
       msg: "{{course | items2dict}}"  
+
+  - name: check ip addresses
+    vars: 
+      my_ip: "356.168.1.1"   
+    ansible.builtin.debug:
+      msg: "{{my_ip | ansible.utils.ipv4}}"  
