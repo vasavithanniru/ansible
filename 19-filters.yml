@@ -2,6 +2,7 @@
   hosts: web 
   vars:
     GREETING: HELLO star
+    NUM: [1,2,2,3,4,5,5]
   tasks: 
   - name: print the default variables 
     ansible.builtin.debug: 
@@ -14,3 +15,7 @@
   - name: print uppercase
     ansible.builtin.debug: 
       msg: "{{GREETING | upper}}"    
+
+  - name: get the unique value 
+    ansible.builtin.debug: 
+      msg: "{{NUM | unique}}"    
