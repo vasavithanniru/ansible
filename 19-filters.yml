@@ -8,5 +8,5 @@
       msg: " Hello {{ COURSE | default('ansible')}}"
 
   - name: print lowercase 
-    ansibl.builtin.debug: 
+    ansible.builtin.debug: 
       msg: "{{GREETING | lower}}"
