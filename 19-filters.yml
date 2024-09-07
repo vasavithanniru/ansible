@@ -1,0 +1,12 @@
+- name: demo on filters/functions
+  hosts: web 
+  vars:
+    GREETING: HELLO STAR
+  tasks: 
+  - name: print the default variables 
+    ansible.builtin.debug: 
+      msg: " Hello {{ COURSE | default('ansible')}}"
+
+  - name: print lowercase 
+    ansibl.builtin.debug: 
+      msg: "{{GREETING | lower}}"
