@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   become: yes
-  tasks:
+  tasks: 
   - name: install packages
     ansible.builtin.package:
       name: "{{ item.name }}"
