@@ -19,3 +19,7 @@
   - name: get the unique value 
     ansible.builtin.debug: 
       msg: "{{NUM | unique}}"    
+
+  - name: get the min and max values 
+    ansible.builtin.debug:
+      msg: " Min: {{NUM | min}}, Max: {{NUM | max}}"    
