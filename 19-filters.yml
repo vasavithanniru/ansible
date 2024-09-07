@@ -1,7 +1,7 @@
 - name: demo on filters/functions
   hosts: web 
   vars:
-    GREETING: HELLO STAR
+    GREETING: HELLO star
   tasks: 
   - name: print the default variables 
     ansible.builtin.debug: 
@@ -10,3 +10,7 @@
   - name: print lowercase 
     ansible.builtin.debug: 
       msg: "{{GREETING | lower}}"
+
+  - name: print uppercase
+    ansible.builtin.debug: 
+    msg: "{{GREETING | upper}}"    
