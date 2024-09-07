@@ -22,4 +22,13 @@
 
   - name: get the min and max values 
     ansible.builtin.debug:
-      msg: " Min: {{NUM | min}}, Max: {{NUM | max}}"    
+      msg: " Min: {{NUM | min}}, Max: {{NUM | max}}"  
+
+  - name: convert map to list
+    vars: 
+      course: 
+        name: Devops
+        trainer: sive 
+        duration: 120hrs
+    ansible.builtin.debug: 
+      msg: "{{course | dict2items}}"    
