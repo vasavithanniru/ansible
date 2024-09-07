@@ -7,6 +7,7 @@
       name: "{{ item.name }}"
       state: "{{ item.state }}"  
     loop: 
+    - { name: 'mysql', state: 'present' }
     - { name: 'mysql', state: 'present' } 
     - { name: 'nginx', state: 'absent'}
     - { name: 'postfix', state: 'present'}
@@ -14,5 +15,5 @@
 
   - name: daemon services 
     ansible.builtin.service: 
-      name: nginx 
+      name: ansible 
       state: started   
